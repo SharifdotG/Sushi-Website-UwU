@@ -361,6 +361,32 @@ a {
 /* END: trending media queries */
 
 /* START: footer media queries */
+@media screen and (max-width: 1024px) {
+  .footer__logo,
+  .footer__social,
+  .footer__nav {
+    margin: auto;
+  }
+
+  .footer ul {
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .footer__logo,
+  .footer__social,
+  .footer__nav {
+    margin: auto;
+  }
+
+  .footer ul {
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .footer__logo,
   .footer__social {
@@ -372,3 +398,4 @@ a {
     gap: 12px;
   }
 }
+/* END: footer media queries */
