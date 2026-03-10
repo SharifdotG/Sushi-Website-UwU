@@ -368,6 +368,7 @@ a {
   }
 
   .footer ul {
+    justify-content: center;
     gap: 12px;
   }
 }
