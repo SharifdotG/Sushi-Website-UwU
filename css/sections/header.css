@@ -65,3 +65,7 @@
 
   position: relative;
 }
+
+.nav-toggle {
+  display: none;
+}

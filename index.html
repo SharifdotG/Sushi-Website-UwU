@@ -12,6 +12,7 @@
     <!-- Header -->
     <header>
       <nav class="header__nav">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
         <div class="header__logo">
           <h4 data-aos="fade-down">Sushiman</h4>
           <div class="header__logo-overlay"></div>
@@ -37,7 +38,9 @@
 
         <ul class="header__menu-mobile" data-aos="fade-down">
           <li>
-            <img src="assets/menu.svg" alt="menu" />
+            <label for="nav-toggle">
+              <img src="assets/menu.svg" alt="menu" />
+            </label>
           </li>
         </ul>
       </nav>
