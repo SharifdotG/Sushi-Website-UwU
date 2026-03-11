@@ -1,5 +1,6 @@
 .header__nav {
   display: flex;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -8,7 +9,10 @@
   display: flex;
 
   position: relative;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin-left: -12px;
 }
 
 .header__logo-overlay {
@@ -31,13 +35,18 @@
   opacity: 0.8;
 }
 
-.header__menu,
-.header__menu-mobile {
-  padding: 20px;
+.header__nav-content {
   flex: 1.236;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__menu {
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  width: 100%;
   gap: 64px;
 
   list-style: none;
@@ -59,13 +68,19 @@
   object-fit: contain;
 }
 
-.header__menu-mobile {
+.header__nav-toggle {
   display: none;
-  gap: 20px;
-
-  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-right: 20px;
+  background: transparent;
+  border: 0;
+  color: var(--color-white);
+  cursor: pointer;
 }
 
-.nav-toggle {
-  display: none;
+.header__nav-toggle svg {
+  width: 28px;
+  height: 28px;
 }
