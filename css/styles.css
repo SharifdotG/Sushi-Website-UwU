@@ -207,6 +207,20 @@ a {
     font-size: 20px;
   }
 }
+
+@media screen and (min-width: 901px) {
+  .header__offcanvas {
+    display: none !important;
+  }
+
+  .offcanvas-backdrop.show {
+    display: none;
+  }
+
+  body.offcanvas-open {
+    overflow: auto;
+  }
+}
 /* END: header media queries */
 
 /* START: hero media queries */
@@ -268,8 +282,23 @@ a {
     min-width: 100%;
   }
 
-  .popular-foods__filter-btn {
-    justify-content: center;
+  .popular-foods__filters {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .popular-foods {
+    padding: 64px 32px;
+  }
+
+  .popular-foods__card,
+  .popular-foods__card.active-card {
+    min-width: 100%;
+  }
+
+  .popular-foods__filters {
+    justify-content: flex-start;
   }
 }
 /* END: popular media queries */

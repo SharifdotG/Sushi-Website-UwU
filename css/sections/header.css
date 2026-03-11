@@ -83,12 +83,7 @@
 
 .header__offcanvas {
   background-color: var(--color-creamson);
-  --bs-offcanvas-width: 200px;
-}
-
-.header__offcanvas:target {
-  visibility: visible;
-  transform: none;
+  --bs-offcanvas-width: 250px;
 }
 
 .header__offcanvas .offcanvas-header {

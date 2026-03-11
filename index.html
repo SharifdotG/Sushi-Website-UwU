@@ -43,12 +43,12 @@
 
         <ul class="header__menu-mobile" data-aos="fade-down">
           <li>
-            <a
+            <button
+              id="mobileMenuToggle"
               class="header__menu-toggle"
-              href="#mobileMenu"
+              type="button"
               aria-controls="mobileMenu"
               aria-label="Open menu"
-              data-bs-toggle="offcanvas"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -63,27 +63,46 @@
                   d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
                 />
               </svg>
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
 
       <div
-        class="offcanvas offcanvas-end header__offcanvas w-10"
+        class="offcanvas offcanvas-end header__offcanvas"
         tabindex="-1"
         id="mobileMenu"
+        data-bs-backdrop="true"
+        data-bs-scroll="true"
         aria-labelledby="mobileMenuLabel"
       >
         <div class="offcanvas-body">
           <ul class="header__offcanvas-menu">
-            <li><a class="btn-close" href="#" aria-label="Close"></a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#food">Food</a></li>
             <li>
-              <a href="#services">Services</a>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
             </li>
             <li>
-              <a href="#about-us">About Us</a>
+              <a href="#menu"
+                ><span data-bs-dismiss="offcanvas">Suchi Menu</span></a
+              >
+            </li>
+            <li>
+              <a href="#food"><span data-bs-dismiss="offcanvas">Food</span></a>
+            </li>
+            <li>
+              <a href="#services"
+                ><span data-bs-dismiss="offcanvas">Services</span></a
+              >
+            </li>
+            <li>
+              <a href="#about-us"
+                ><span data-bs-dismiss="offcanvas">About Us</span></a
+              >
             </li>
             <li><img src="assets/search.svg" alt="search" /></li>
           </ul>
@@ -437,6 +456,28 @@
     </footer>
     <!-- Subscription Section -->
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      (() => {
+        const offcanvasElement = document.getElementById("mobileMenu");
+        const toggleButton = document.getElementById("mobileMenuToggle");
+
+        if (
+          !offcanvasElement ||
+          !toggleButton ||
+          !window.bootstrap?.Offcanvas
+        ) {
+          return;
+        }
+
+        const offcanvas =
+          window.bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
+
+        toggleButton.addEventListener("click", () => {
+          offcanvas.toggle();
+        });
+      })();
+    </script>
     <script src="js/script.js" type="module"></script>
   </body>
 </html>
