@@ -28,7 +28,7 @@
   overflow-x: auto;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 24px;
 }
 
@@ -36,7 +36,6 @@
   padding: 10px 28px;
 
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 10px;
 

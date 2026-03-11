@@ -66,6 +66,56 @@
   position: relative;
 }
 
-.nav-toggle {
-  display: none;
+.header__menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header__menu-toggle svg {
+  width: 28px;
+  height: 28px;
+}
+
+.header__offcanvas {
+  background-color: var(--color-creamson);
+  --bs-offcanvas-width: 200px;
+}
+
+.header__offcanvas:target {
+  visibility: visible;
+  transform: none;
+}
+
+.header__offcanvas .offcanvas-header {
+  border-bottom: 1px solid rgba(177, 69, 74, 0.2);
+}
+
+.header__offcanvas-menu {
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 18px;
+}
+
+.header__offcanvas-menu li {
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--secondary-color);
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 20px;
+}
+
+.header__offcanvas-menu li img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }

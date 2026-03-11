@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/sushi.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Sushiman</title>
   </head>
@@ -12,7 +18,6 @@
     <!-- Header -->
     <header>
       <nav class="header__nav">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
         <div class="header__logo">
           <h4 data-aos="fade-down">Sushiman</h4>
           <div class="header__logo-overlay"></div>
@@ -38,12 +43,52 @@
 
         <ul class="header__menu-mobile" data-aos="fade-down">
           <li>
-            <label for="nav-toggle">
-              <img src="assets/menu.svg" alt="menu" />
-            </label>
+            <a
+              class="header__menu-toggle"
+              href="#mobileMenu"
+              aria-controls="mobileMenu"
+              aria-label="Open menu"
+              data-bs-toggle="offcanvas"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                />
+              </svg>
+            </a>
           </li>
         </ul>
       </nav>
+
+      <div
+        class="offcanvas offcanvas-end header__offcanvas w-10"
+        tabindex="-1"
+        id="mobileMenu"
+        aria-labelledby="mobileMenuLabel"
+      >
+        <div class="offcanvas-body">
+          <ul class="header__offcanvas-menu">
+            <li><a class="btn-close" href="#" aria-label="Close"></a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#food">Food</a></li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#about-us">About Us</a>
+            </li>
+            <li><img src="assets/search.svg" alt="search" /></li>
+          </ul>
+        </div>
+      </div>
     </header>
     <!-- Header -->
 
