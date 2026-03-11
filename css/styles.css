@@ -175,38 +175,26 @@ a {
     position: relative;
   }
 
-  .header__nav-toggle {
-    display: flex;
-  }
-
-  .header__nav-content {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    z-index: 6;
-    overflow: hidden;
-  }
-
-  .header__nav-content.collapse:not(.show) {
+  .header__menu {
     display: none;
   }
 
-  .header__nav-content.collapse.show,
-  .header__nav-content.collapsing {
-    display: block;
+  .header__menu-mobile {
+    display: flex;
   }
 
-  .header__nav-content.collapsing {
-    transition: height 0.35s ease;
-  }
-
-  .header__menu {
+  .nav-toggle:checked ~ .header__menu {
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
+    position: absolute;
+    top: 100%;
+    right: 0;
     background: var(--color-creamson);
     padding: 20px 30px;
     gap: 16px;
+    z-index: 6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -215,12 +203,29 @@ a {
     position: relative;
   }
 
-  .header__nav-toggle {
-    margin-right: 16px;
+  .header__menu {
+    display: none;
+  }
+  .header__menu li {
+    font-size: 14px;
   }
 
-  .header__menu {
-    padding: 18px 24px;
+  .header__menu-mobile {
+    display: flex;
+  }
+
+  .nav-toggle:checked ~ .header__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--color-creamson);
+    padding: 20px 30px;
+    gap: 16px;
+    z-index: 6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -296,16 +301,12 @@ a {
   }
 
   .popular-foods__filters {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 16px;
-    padding-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 
   .popular-foods__filter-btn {
-    flex: 0 0 auto;
     justify-content: center;
-    white-space: nowrap;
   }
 }
 
@@ -320,14 +321,11 @@ a {
   }
 
   .popular-foods__filters {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 16px;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .popular-foods__filter-btn {
-    flex: 0 0 auto;
     justify-content: center;
   }
 }

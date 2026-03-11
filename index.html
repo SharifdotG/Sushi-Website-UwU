@@ -12,57 +12,37 @@
     <!-- Header -->
     <header>
       <nav class="header__nav">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
         <div class="header__logo">
           <h4 data-aos="fade-down">Sushiman</h4>
           <div class="header__logo-overlay"></div>
         </div>
 
-        <button
-          class="navbar-toggler header__nav-toggle border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbar-supported-content"
-          aria-controls="navbar-supported-content"
-          aria-expanded="false"
-          aria-label="Toggle Navigation"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-list"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-            />
-          </svg>
-        </button>
+        <ul class="header__menu" data-aos="fade-down">
+          <li>
+            <a href="#menu">Menu</a>
+          </li>
+          <li>
+            <a href="#food">Food</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#about-us">About Us</a>
+          </li>
+          <li>
+            <img src="assets/search.svg" alt="search" />
+          </li>
+        </ul>
 
-        <div
-          class="collapse navbar-collapse header__nav-content"
-          id="navbar-supported-content"
-        >
-          <ul class="header__menu" data-aos="fade-down">
-            <li>
-              <a href="#menu">Menu</a>
-            </li>
-            <li>
-              <a href="#food">Food</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#about-us">About Us</a>
-            </li>
-            <li>
-              <img src="assets/search.svg" alt="search" />
-            </li>
-          </ul>
-        </div>
+        <ul class="header__menu-mobile" data-aos="fade-down">
+          <li>
+            <label for="nav-toggle">
+              <img src="assets/menu.svg" alt="menu" />
+            </label>
+          </li>
+        </ul>
       </nav>
     </header>
     <!-- Header -->
@@ -412,7 +392,6 @@
     </footer>
     <!-- Subscription Section -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js" type="module"></script>
   </body>
 </html>
