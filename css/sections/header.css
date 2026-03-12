@@ -82,34 +82,90 @@
 }
 
 .header__offcanvas {
-  background-color: var(--color-creamson);
-  --bs-offcanvas-width: 250px;
+  background: linear-gradient(135deg, var(--color-creamson) 0%, #ffecd9 100%);
+  --bs-offcanvas-width: 75%;
+  box-shadow: -10px 0 30px rgba(177, 69, 74, 0.15);
+}
+
+.header__offcanvas .offcanvas-body {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .header__offcanvas .offcanvas-header {
-  border-bottom: 1px solid rgba(177, 69, 74, 0.2);
+  display: none;
 }
 
 .header__offcanvas-menu {
   list-style: none;
-  margin: 20px;
+  margin: 0;
+  padding: 25px 0;
   display: flex;
   flex-direction: column;
-  align-items: end;
-  gap: 30px;
+  align-items: flex-end;
+  gap: 0;
+  width: 100%;
+}
+
+.header__offcanvas-menu li:first-child {
+  align-self: flex-start;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+}
+
+.header__offcanvas-menu li:first-child .btn-close {
+  color: var(--secondary-color);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.header__offcanvas-menu li:first-child .btn-close:hover {
+  opacity: 1;
 }
 
 .header__offcanvas-menu li {
-  font-weight: 500;
+  width: 100%;
+  padding: 15px 30px;
+  font-weight: 600;
   font-family: var(--plus-jakarta-sans);
   color: var(--secondary-color);
-  font-size: 16px;
+  font-size: 15px;
   text-transform: uppercase;
   line-height: 20px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  border-left: 4px solid transparent;
+}
+
+.header__offcanvas-menu li:nth-child(n + 2) {
+  border-bottom: 1px solid rgba(177, 69, 74, 0.1);
+}
+
+.header__offcanvas-menu li:nth-child(n + 2):hover {
+  background-color: rgba(177, 69, 74, 0.08);
+  border-left-color: var(--primary-color);
+  padding-left: 35px;
+}
+
+.header__offcanvas-menu li a {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.header__offcanvas-menu li:nth-child(n + 2) a:hover {
+  transform: translateX(5px);
 }
 
 .header__offcanvas-menu li img {
   width: 24px;
   height: 24px;
   object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.header__offcanvas-menu li:last-child:hover img {
+  transform: scale(1.1);
 }
